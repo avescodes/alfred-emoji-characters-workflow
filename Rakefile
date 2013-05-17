@@ -19,7 +19,6 @@ FileList['*/Rakefile'].each { |file|
 }
 
 task :config do
-
   info = Plist::parse_xml($config["plist"])
   unless info['bundleid'].eql?($config["bundleid"])
     info['bundleid'] = $config["bundleid"]
@@ -34,18 +33,14 @@ end
 desc "Install Gems"
 task "bundle:install" => [:chdir] do
   sh %Q{bundle install --standalone --clean} do |ok, res|
-    if ! ok
-      puts "fail to install gems (status = #{res.exitstatus})"
-    end
+    fail "Failed to install gems (status = #{res.exitstatus})" unless ok
   end
 end
 
 desc "Update Gems"
 task "bundle:update" => [:chdir] do
   sh %Q{bundle update && bundle install --standalone --clean} do |ok, res|
-    if ! ok
-      puts "fail to update gems (status = #{res.exitstatus})"
-    end
+    fail "Failed to update gems (status = #{res.exitstatus})" unless ok
   end
 end
 
@@ -59,9 +54,6 @@ task :uninstall => [:config] do
   rm File.join(workflow_home, $config["bundleid"])
 end
 
-
-
-
 desc "Clean up all the extras"
 task :clean => [:config] do
 end
@@ -72,4 +64,9 @@ task :clobber => [:clean] do
   rmtree File.join($config["path"], "bundle")
 end
 
-
+desc "Package workflow/ into .alfredworkflow file"
+task :package => ["bundle:install"] do
+  sh %q{zip -r ../emoji-characters.alfredworkflow *} do |ok, res|
+    fail "Failed to generate .alfredworkflow" unless ok
+  end
+end

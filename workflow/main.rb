@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# encoding: utf-8
 
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require "bundle/bundler/setup"
@@ -19,7 +18,7 @@ def emoji_item(emoji_name)
     :uid => emoji_code,
     :title => emoji_code,
     :icon => icon_hash(emoji_name),
-    :arg =>  EmojiCharacters.from_code(emoji_name)
+    :arg =>  EmojiCharacters.from_code(emoji_name) || emoji_code
   }
 end
 

@@ -1,2 +1,3 @@
-workflow/.bundle
-workflow/bundle
+/workflow/.bundle
+/workflow/bundle
+/emoji-characters.alfredworkflow
