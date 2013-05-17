@@ -6,7 +6,7 @@ but it returns characters!
 
 **Usage**: `:[query]`
 
-After you hit `<enter>` the Emoji character (think 🍺, not :beer:) will be copied to
+After you hit `<enter>` the Emoji character (think :beer:, not `:beer:`) will be copied to
 your pastebuffer and simultaneous pasted into the active window.
 
 **[Download the workflow](https://raw.github.com/rkneufeld/alfred-emoji-characters-workflow/master/alfred-emoji-characters.alfredworkflow)**
