@@ -40,7 +40,9 @@
 				<key>runningsubtext</key>
 				<string>searching...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby ./main.rb {query}</string>
+				<string>/Library/Ruby/Gems/2.0.0/gems/bundler-1.7.3/bin/bundle exec /usr/bin/ruby ./main.rb {query}</string>
+				<key>subtext</key>
+				<string>Querying for '{query}'</string>
 				<key>title</key>
 				<string>Emoji</string>
 				<key>type</key>
@@ -52,6 +54,8 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>21557827-8003-42B7-A042-16D4C9278FEC</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -65,6 +69,8 @@
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>1172DB1D-0BEA-47D7-B3A1-CA80B77C74AC</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>readme</key>
