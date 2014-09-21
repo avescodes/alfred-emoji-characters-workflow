@@ -40,7 +40,7 @@
 				<key>runningsubtext</key>
 				<string>searching...</string>
 				<key>script</key>
-				<string>/Library/Ruby/Gems/2.0.0/gems/bundler-1.7.3/bin/bundle exec /usr/bin/ruby ./main.rb {query}</string>
+				<string>/usr/bin/ruby ./main.rb {query}</string>
 				<key>subtext</key>
 				<string>Querying for '{query}'</string>
 				<key>title</key>
