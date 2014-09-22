@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
-require "bundler/setup"
+require_relative "bundle/bundler/setup"
 require "alfred"
 
 require 'gemoji'
