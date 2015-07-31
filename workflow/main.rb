@@ -22,6 +22,15 @@ def emoji_item(emoji)
   }
 end
 
+def is_image_only(emoji)
+  if emoji.image_filename == "#{emoji.name}.png"
+      is_image = true
+  else
+      is_image = false
+  end
+  is_image
+end
+
 Alfred.with_friendly_error do |alfred|
   fb = alfred.feedback
 
@@ -29,7 +38,7 @@ Alfred.with_friendly_error do |alfred|
     query = Regexp.escape(ARGV.first)
 
     items = Emoji.all.map(&:name).grep(/#{query}/).each do |code|
-      fb.add_item(emoji_item(Emoji.find_by_alias(code)))
+      fb.add_item(emoji_item(Emoji.find_by_alias(code))) unless is_image_only(Emoji.find_by_alias(code))
     end
 
     puts fb.to_xml(ARGV)
