@@ -23,11 +23,7 @@ def emoji_item(emoji)
 end
 
 def is_image_only(emoji)
-    is_image = false
-  if emoji.image_filename == "#{emoji.name}.png"
-      is_image = true
-  end
-  is_image
+    emoji.image_filename == "#{emoji.name}.png"
 end
 
 Alfred.with_friendly_error do |alfred|
