@@ -9,7 +9,7 @@ but it returns characters!
 After you hit `<enter>` the Emoji character (think :beer:, not `:beer:`) will be copied to
 your pastebuffer and simultaneous pasted into the active window.
 
-**[Download the workflow](https://github.com/rkneufeld/alfred-emoji-characters-workflow/releases/download/v1.0/emoji-characters.zip)**
+**[Download the workflow](https://github.com/rkneufeld/alfred-emoji-characters-workflow/releases/download/v1.0.1/emoji-characters.zip)**
 
 ![Beer!](screenshots/beer.png)
 
