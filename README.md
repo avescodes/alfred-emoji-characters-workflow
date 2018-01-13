@@ -1,4 +1,12 @@
-# Search Emoji characters using Alfred 2
+# PROJECT NO LONGER ACTIVE
+
+**PLEASE TRY [ALFRED EMOJI](https://github.com/jsumners/alfred-emoji) INSTEAD** ([jsumners/alfred-emoji](https://github.com/jsumners/alfred-emoji))
+
+To get the same behavior, <kbd>alt</kbd>+<kbd>return</kbd> in Alfred Emoji will yield the same character-based results.
+
+----
+
+### Search Emoji characters using Alfred 2
 
 It's like
 [alfred-emoji-workflow](https://github.com/carlosgaldino/alfred-emoji-workflow),
@@ -13,7 +21,7 @@ your pastebuffer and simultaneous pasted into the active window.
 
 ![Beer!](screenshots/beer.png)
 
-## LICENSE
+#### LICENSE
 
 Forthcoming. Presently, All Rights Reserved 2013 - Ryan Neufeld <ryan@rkn.io>. (Obviously you're allowed to *use* the workflow.)
 
